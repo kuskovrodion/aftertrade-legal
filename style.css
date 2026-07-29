@@ -1,0 +1,297 @@
+/* Aftertrade — warm paper-and-ink neutrals, single ember accent.
+   Colour values mirror the app's ColorsV2 tokens. */
+
+:root {
+  --background: #f4f2ed;
+  --surface: #fcfbf8;
+  --surface-2: #edeae2;
+  --hairline: rgba(28, 25, 20, 0.08);
+  --text-primary: #211e19;
+  --text-secondary: #6e6759;
+  --text-tertiary: #6f685b;
+  --ember: #a8752f;
+  --ember-foreground: #84571e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0d0c0b;
+    --surface: #151311;
+    --surface-2: #1d1a16;
+    --hairline: rgba(255, 255, 255, 0.07);
+    --text-primary: #f2efe7;
+    --text-secondary: #a29c8f;
+    --text-tertiary: #898377;
+    --ember: #d9a868;
+    --ember-foreground: #d9a868;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0 24px 96px;
+  background: var(--background);
+  color: var(--text-primary);
+  /* Resolves to the platform UI face — SF on Apple, and the host's own system
+     font elsewhere, without naming third-party families. */
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 44rem;
+  margin: 0 auto;
+}
+
+/* Masthead */
+
+header.masthead {
+  padding: 72px 0 40px;
+  border-bottom: 1px solid var(--hairline);
+  margin-bottom: 48px;
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ember-foreground);
+  text-decoration: none;
+}
+
+.wordmark::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ember);
+  transform: translateY(-0.15em);
+}
+
+h1 {
+  margin: 28px 0 10px;
+  font-size: clamp(2rem, 6vw, 2.75rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.dek {
+  margin: 0;
+  max-width: 34rem;
+  color: var(--text-secondary);
+  font-size: 1.0625rem;
+}
+
+.updated {
+  margin: 22px 0 0;
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Body copy */
+
+h2 {
+  margin: 56px 0 14px;
+  font-size: 1.3125rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+
+h2 .num {
+  color: var(--text-tertiary);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  margin-right: 0.45rem;
+}
+
+h3 {
+  margin: 32px 0 8px;
+  font-size: 1.0625rem;
+  font-weight: 650;
+}
+
+p {
+  margin: 0 0 16px;
+}
+
+ul {
+  margin: 0 0 16px;
+  padding-left: 1.15rem;
+}
+
+li {
+  margin-bottom: 9px;
+}
+
+li::marker {
+  color: var(--text-tertiary);
+}
+
+strong {
+  font-weight: 650;
+}
+
+a {
+  color: var(--ember-foreground);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+code {
+  font-family: ui-monospace, monospace;
+  font-size: 0.9em;
+  color: var(--text-secondary);
+}
+
+/* Cards — hairlines, never shadows */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 18px;
+  padding: 24px 26px;
+  margin: 0 0 20px;
+}
+
+.card > :last-child {
+  margin-bottom: 0;
+}
+
+.card-title {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  font-weight: 650;
+}
+
+/* Summary list */
+
+.summary {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.summary li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 12px;
+}
+
+/* Ember, not green: green and red belong to realized PnL only. */
+.summary li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ember);
+}
+
+/* Hub links */
+
+.hub {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hub a {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 18px;
+  padding: 22px 24px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.hub a:hover {
+  border-color: var(--ember);
+}
+
+.hub .label {
+  display: block;
+  font-size: 1.0625rem;
+  font-weight: 650;
+  margin-bottom: 4px;
+}
+
+.hub .hint {
+  display: block;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+}
+
+/* Definition rows */
+
+.rows {
+  margin: 0;
+}
+
+.rows div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.rows div:last-child {
+  border-bottom: 0;
+}
+
+.rows dt {
+  flex: 0 0 9rem;
+  font-weight: 650;
+  font-size: 0.9375rem;
+}
+
+.rows dd {
+  flex: 1 1 14rem;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+}
+
+footer {
+  margin-top: 72px;
+  padding-top: 28px;
+  border-top: 1px solid var(--hairline);
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+}
+
+footer a {
+  color: var(--text-secondary);
+}
+
+footer p {
+  margin: 0 0 8px;
+}

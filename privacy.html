@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — Aftertrade</title>
+    <meta
+      name="description"
+      content="How Aftertrade handles your trading journal, voice recordings, and analytics — feature by feature."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="masthead">
+        <a class="wordmark" href="./">Aftertrade</a>
+        <h1>Privacy Policy</h1>
+        <p class="dek">
+          Your journal is a private financial record. This page describes what
+          the app does with data — feature by feature, not in general terms.
+        </p>
+        <p class="updated">Last updated 30 July 2026</p>
+      </header>
+
+      <div class="card">
+        <p class="card-title">The short version</p>
+        <ul class="summary">
+          <li>
+            Your journal never leaves your devices except through
+            <strong>your own</strong> iCloud account.
+          </li>
+          <li>
+            Voice recording and AI processing happen on your device. Audio is
+            never uploaded.
+          </li>
+          <li>
+            Usage analytics are <strong>off until you turn them on</strong>, and
+            never contain journal content.
+          </li>
+          <li>
+            Crash reports are collected in the App Store build so malfunctions
+            can be fixed.
+          </li>
+          <li>
+            No advertising, no tracking across other apps or websites, no sale of
+            data.
+          </li>
+        </ul>
+      </div>
+
+      <h2><span class="num">1</span>Who is responsible</h2>
+      <p>
+        Aftertrade is built and operated by an independent developer. For any
+        privacy question or request, write to
+        <a href="mailto:aftertradesupport@gmail.com"
+          >aftertradesupport@gmail.com</a
+        >.
+      </p>
+
+      <h2><span class="num">2</span>Your journal</h2>
+      <p>
+        What you enter stays yours: instrument, direction, entry and exit price,
+        position size, stop loss, take-profit levels, realized profit and loss,
+        timeframe, setups, mindsets, notes, and any chart image you attach. It is
+        stored on your device.
+      </p>
+      <p>
+        If you have iCloud enabled, this data is mirrored to the
+        <strong>private</strong> database of your own iCloud account so your
+        devices stay in step. That copy lives in your Apple account, not on any
+        server belonging to Aftertrade. The developer cannot read it, cannot
+        access it, and holds no copy of it. Apple's handling of it is governed by
+        <a href="https://www.apple.com/legal/privacy/" rel="noopener"
+          >Apple's Privacy Policy</a
+        >.
+      </p>
+      <p>
+        If you sign out of iCloud or disable it for Aftertrade, the journal
+        simply stays local to the device.
+      </p>
+
+      <h2><span class="num">3</span>Voice logging</h2>
+      <ul>
+        <li>
+          The microphone is used only while you are actively recording a trade,
+          and only after you grant permission.
+        </li>
+        <li>
+          Speech is turned into text by Apple's on-device speech recognition,
+          using models installed locally on your iPhone. The audio is processed
+          on the device and is not sent to any server — not Apple's, and not
+          ours.
+        </li>
+        <li>
+          The recording is not saved. It is discarded when the capture session
+          ends; only the transcript you can see on screen is kept, and only long
+          enough to build your draft entry.
+        </li>
+      </ul>
+
+      <h2><span class="num">4</span>AI features</h2>
+      <p>
+        Turning your spoken words into a draft trade, and writing the short
+        summaries you see in reviews, both use Apple's on-device foundation
+        model. This runs locally on your iPhone. No third-party AI provider is
+        involved, nothing is sent to a server for processing, and your journal is
+        never used to train any model.
+      </p>
+
+      <h2><span class="num">5</span>Usage analytics — off unless you allow it</h2>
+      <p>
+        Aftertrade can measure which features get used, so the app can be
+        improved. This is handled by Mixpanel, using their European ingestion
+        endpoint.
+      </p>
+      <ul>
+        <li>
+          <strong>Disabled by default.</strong> The app starts opted out, asks
+          you once on first launch, and you can change your mind at any time in
+          <strong>Profile → Privacy</strong>. If you decline, or later switch it
+          off, nothing is sent.
+        </li>
+        <li>
+          <strong>What is sent:</strong> which screens were opened and which
+          actions were taken, described as fixed event names, plus counts,
+          yes/no flags, and fixed category values. Alongside them: the platform
+          (<code>ios</code>), the app version, and the build number.
+        </li>
+        <li>
+          <strong>What is never sent:</strong> no instrument, price, position
+          size, profit and loss, note text, chart link, or any other journal
+          content. Events carry shape only — how many, whether, which category.
+          This is enforced by the app's own code, not merely promised here.
+        </li>
+        <li>
+          <strong>No identity.</strong> There is no account, name, or email
+          address to attach. The app never tells Mixpanel who you are; events
+          carry only an anonymous per-installation identifier that Mixpanel
+          generates.
+        </li>
+        <li>
+          Deriving a coarse location from your IP address is switched off.
+        </li>
+      </ul>
+      <p>
+        Mixpanel processes this on our behalf under
+        <a href="https://mixpanel.com/legal/privacy-policy/" rel="noopener"
+          >their privacy policy</a
+        >.
+      </p>
+
+      <h2><span class="num">6</span>Crash and performance reports</h2>
+      <p>
+        App Store builds include New Relic to report crashes and performance
+        problems. It is not present in development builds. It collects crash
+        reports, stability and performance metrics, and ordinary technical
+        context such as device model, operating system version, and app version.
+      </p>
+      <p>Two things are worth stating plainly:</p>
+      <ul>
+        <li>
+          <strong>Every network-capture feature is switched off</strong> before
+          the reporter starts — URL logging, network request events, request
+          error events, response body capture, and distributed tracing. This is
+          deliberate: a chart link is journal content, and no diagnostic tool may
+          record it.
+        </li>
+        <li>
+          This reporter starts when the app launches, separately from the
+          analytics choice in section 5. It reports malfunctions rather than
+          usage, and a crash on the launch path happens before any choice can be
+          recorded. If this concerns you, write to the address above.
+        </li>
+      </ul>
+      <p>
+        New Relic processes this under
+        <a
+          href="https://newrelic.com/termsandconditions/privacy"
+          rel="noopener"
+          >their privacy policy</a
+        >.
+      </p>
+
+      <h2><span class="num">7</span>Searching for an instrument</h2>
+      <p>
+        When you search for a coin, the text you typed is sent to CoinMarketCap's
+        public API to find matching assets, and asset logos are loaded from their
+        servers. Only the search text leaves your device — no API key, no
+        identifier, and nothing from your journal. CoinMarketCap's handling is
+        governed by
+        <a href="https://coinmarketcap.com/privacy/" rel="noopener"
+          >their privacy policy</a
+        >.
+      </p>
+
+      <h2><span class="num">8</span>Chart attachments</h2>
+      <p>
+        If you attach a chart by pasting a link, the app requests that address
+        directly from the host you named, over HTTPS only, without cookies or
+        credentials. That host will see the request in its own server logs,
+        exactly as if you had opened the link in a browser. Attach links you are
+        comfortable requesting.
+      </p>
+      <p>
+        If you attach a chart from your photo library instead, the image is
+        copied into your journal and is then covered by section 2. Aftertrade
+        uses Apple's system picker, which hands over only the image you chose and
+        gives the app no access to the rest of your library.
+      </p>
+
+      <h2><span class="num">9</span>Notifications</h2>
+      <p>
+        The app may ask for permission to send alerts so the capability is ready.
+        <strong>Aftertrade currently sends no notifications</strong> — no
+        marketing, no reminders, nothing. Separately, iCloud sync relies on
+        Apple's silent notification mechanism to learn that another one of your
+        devices changed something; that is Apple's own infrastructure and carries
+        no journal content to us.
+      </p>
+
+      <h2><span class="num">10</span>What Aftertrade does not do</h2>
+      <ul>
+        <li>No advertising, ad networks, or advertising identifiers.</li>
+        <li>No tracking of you across other apps or websites.</li>
+        <li>No selling or sharing of data with data brokers.</li>
+        <li>No user accounts and no third-party sign-in.</li>
+        <li>No collection of your location.</li>
+        <li>
+          No use of your journal for anything other than showing it back to you.
+        </li>
+      </ul>
+
+      <h2><span class="num">11</span>How long data is kept</h2>
+      <dl class="rows">
+        <div>
+          <dt>Your journal</dt>
+          <dd>
+            Until you delete it. Deleting a trade removes it from the device and,
+            when sync is on, from your iCloud. Deleting the app removes the local
+            copy; the iCloud copy is managed in iOS Settings under your Apple
+            Account.
+          </dd>
+        </div>
+        <div>
+          <dt>Analytics events</dt>
+          <dd>Retained by Mixpanel under that project's retention settings.</dd>
+        </div>
+        <div>
+          <dt>Crash reports</dt>
+          <dd>Retained by New Relic under that account's retention settings.</dd>
+        </div>
+      </dl>
+
+      <h2><span class="num">12</span>Your rights</h2>
+      <p>
+        Depending on where you live, you may have the right to access, correct,
+        export, or delete personal data held about you. Two things make this
+        unusually simple here: your journal is already in your own possession and
+        your own iCloud account, and analytics events carry no identifier that
+        would let anyone tie them back to you. For anything else, write to the
+        address above and it will be handled.
+      </p>
+
+      <h2><span class="num">13</span>Children</h2>
+      <p>
+        Aftertrade is not directed at children and is not intended for anyone
+        under 13, or under the minimum age required in your country.
+      </p>
+
+      <h2><span class="num">14</span>Changes to this policy</h2>
+      <p>
+        If this policy changes, this page is updated and the date at the top
+        changes with it. A change that affects what analytics collect would also
+        be reflected in the app's own privacy settings.
+      </p>
+
+      <h2><span class="num">15</span>Contact</h2>
+      <p>
+        <a href="mailto:aftertradesupport@gmail.com"
+          >aftertradesupport@gmail.com</a
+        >
+      </p>
+
+      <footer>
+        <p>Aftertrade — a trading journal for iPhone.</p>
+        <p><a href="./">Home</a> · <a href="support.html">Support</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
